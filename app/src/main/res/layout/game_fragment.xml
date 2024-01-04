@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/game_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/game_fragment_background"
+        tools:context=".screens.game.GameFragment">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            android:text="@string/start_text"
+            android:theme="@style/start_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/your_score"
+            style="@style/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="@string/score_text"
+            app:layout_constraintEnd_toStartOf="@+id/computer_score"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/computer_score"
+            style="@style/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/computer_score_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/your_score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/score_of_your"
+            style="@style/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:text="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/score_of_computer"
+            app:layout_constraintEnd_toEndOf="@+id/your_score"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/score_of_computer"
+            style="@style/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/computer_score"
+            app:layout_constraintTop_toBottomOf="@+id/computer_score" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="200dp" />
+
+        <ImageView
+            android:id="@+id/your_imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="120dp"
+            app:layout_constraintBottom_toBottomOf="@+id/computer_imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:srcCompat="@null" />
+
+        <ImageView
+            android:id="@+id/computer_imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.965"
+            app:layout_constraintStart_toEndOf="@+id/your_imageView"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:srcCompat="@null" />
+
+        <ImageButton
+            android:id="@+id/rock_sign_imageButton"
+            style="@style/round_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="120dp"
+            android:enabled="false"
+            android:visibility="gone"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/paper_sign_imageButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/your_imageView"
+            app:layout_constraintVertical_bias="0.207"
+            app:srcCompat="@drawable/rock_sign" />
+
+        <ImageButton
+            android:id="@+id/paper_sign_imageButton"
+            style="@style/round_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:enabled="false"
+            android:visibility="gone"
+            android:text=""
+            app:layout_constraintEnd_toStartOf="@+id/scissor_sign_imageButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/rock_sign_imageButton"
+            app:layout_constraintTop_toTopOf="@+id/rock_sign_imageButton"
+            app:srcCompat="@drawable/paper_sign" />
+
+        <ImageButton
+            android:id="@+id/scissor_sign_imageButton"
+            style="@style/round_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:enabled="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@+id/paper_sign_imageButton"
+            app:layout_constraintTop_toTopOf="@+id/paper_sign_imageButton"
+            app:srcCompat="@drawable/scissor_sign" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="thickLightBlue">#04AFD1</color>
+    <!--   Color for the app bar and other primary UI elements. -->
+    <color name="colorPrimary">#E7CD4D</color>
+    <!--   A darker variant of the primary color, used for
+           the status bar (on Android 5.0+) and contextual app bars. -->
+    <color name="colorPrimaryDark">#AF9515</color>
+    <!--   a secondary color for controls like checkboxes and text fields. -->
+    <color name="colorAccent">#EC9C3B</color>
+    <color name="light_green_color">#6ab343</color>
+    <color name="green_color">#388310</color>
+    <color name="light_red_color">#f44336</color>
+    <color name="red_color">#ba000d</color>
+    <color name="background_mask">#9ac92e</color>
+    <color name="you_win_background">#B7F8C9</color>
+    <color name="game_over_background">#f8bbd0</color>
+    <color name="game_fragment_background">#a0ce34</color>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <corners android:radius="50dp"/> <!-- Adjust the radius to make the corners rounder -->
+    <!-- Set the button background color -->
+    <solid android:color="#a0ce34"/>
+    <padding
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp"
+        android:bottom="10dp" /> <!-- Adjust padding as needed -->
+</shape>
